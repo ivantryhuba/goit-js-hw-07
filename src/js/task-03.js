@@ -1,3 +1,4 @@
+'use strict';
 // Используй массив объектов images для создания тегов img вложенных в li. Для создания разметки используй шаблонные строки и insertAdjacentHTML().
 
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
@@ -19,3 +20,6 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Находим галерею
+const findGallery = document.querySelector('ul#gallery');
