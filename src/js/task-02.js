@@ -19,4 +19,4 @@ const item = ingredients.map(ingredient => {
   const igredientsItem = document.createElement('li');
   igredientsItem.textContent = ingredient;
   ingredientsList.appendChild(igredientsItem);
-})
+});
