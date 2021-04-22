@@ -22,4 +22,19 @@ const images = [
 ];
 
 // Находим галерею
-const findGallery = document.querySelector('ul#gallery');
+const galleryEl = document.querySelector('ul#gallery');
+
+// Создаем шаблонную строку, в которой прописываем разметку картики и возвращаем ее
+const createImageEl = image => {
+  const imageItem = `<li class="item"><img class="image" src="${image.url}" alt="${image.alt}"></li>`;
+  return imageItem;
+};
+
+// Возвращаем массив картинок, применив к ним коллбек и делаем строку
+const makeImagesCollection = images.map(createImageEl).join(' ');
+
+// Вставляем разметку картинок в галерею
+const createGallery = galleryEl.insertAdjacentHTML(
+  'afterbegin',
+  makeImagesCollection,
+);
