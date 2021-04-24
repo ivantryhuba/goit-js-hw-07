@@ -1,4 +1,4 @@
-#gallery{
+#gallery {
   display: flex;
   align-items: center;
   margin-left: -5px;
@@ -6,13 +6,25 @@
   padding: 10px;
 }
 
-.item{
-    list-style: none;
-    width: 300px;
-    margin-left: 5px;
-    margin-right: 5px;
+.item {
+  list-style: none;
+  width: 300px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-.image{
-    width: 100%;
+.image {
+  width: 100%;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }
