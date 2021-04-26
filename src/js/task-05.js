@@ -7,9 +7,7 @@ const outputEl = document.querySelector('#name-output');
 
 // Создали функцию вывода инпута в заголовок
 const onInputChange = event => {
-    outputEl.textContent = event.currentTarget.value;
-    console.log(event.currentTarget.value);
-    console.log(outputEl.textContent);
+    outputEl.textContent = event.currentTarget.value||'незнакомец';
 };
 
 // Слушатель на инпут

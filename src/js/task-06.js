@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 //! Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
 
 // ! Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
@@ -15,11 +15,14 @@ console.log(inputElLength);
 
 // Функция валидации
 const validation = event => {
-  inputEl.classList.add('invalid');
   if (event.currentTarget.value.length === inputElLength) {
     inputEl.classList.add('valid');
-    inputEl.classList.toggle('invalid');
+    inputEl.classList.remove('invalid');
+    return;
   }
+  inputEl.classList.add('invalid');
+  inputEl.classList.remove('valid');
+  return;
 };
 
 // Слушаем на инпуте потерю фокуса
